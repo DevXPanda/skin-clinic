@@ -289,9 +289,6 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(
   .nav-toggle{display:flex}
   .header__cta .btn{display:none}
   .doctor__inner,.contact__grid{grid-template-columns:1fr;gap:40px}
-  .hero{min-height:auto;padding:60px 0}
-  .hero__bg{background-position:70% center}
-  .hero__overlay{background:linear-gradient(180deg,rgba(246,241,231,.94) 0%,rgba(246,241,231,.8) 40%,rgba(246,241,231,.55) 100%)}
   .hero__content{max-width:100%}
   .grid--3,.grid--4{grid-template-columns:repeat(2,1fr)}
   .strip__inner{grid-template-columns:repeat(2,1fr);gap:22px}
