@@ -133,6 +133,37 @@ form?.addEventListener("submit", async (e) => {
     }, 4000);
   }
 });
+//read more//
+// ===== Blog cards collapsible =====
+document.querySelectorAll(".bcard__toggle").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // taaki document click turant na chal jaye
+    const card = btn.closest(".bcard");
+    const content = card.querySelector(".bcard__content");
+    const isOpen = content.classList.contains("open");
 
+    // pehle sab band kar
+    document.querySelectorAll(".bcard__content.open").forEach((c) => {
+      c.classList.remove("open");
+      c.previousElementSibling.textContent = "Read More →";
+    });
+
+    // agar ye already open nahi tha, toh khol
+    if (!isOpen) {
+      content.classList.add("open");
+      btn.textContent = "Read Less ↑";
+    }
+  });
+});
+
+// Kahin bhi (card ke bahar) click karne pe collapse
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".bcard")) {
+    document.querySelectorAll(".bcard__content.open").forEach((c) => {
+      c.classList.remove("open");
+      c.previousElementSibling.textContent = "Read More →";
+    });
+  }
+});
 // ===== Footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();
