@@ -161,8 +161,8 @@ function confirmToPatient_(d, stamp) {
           CLINIC_ADDR + '<br>' +
           'Phone: ' + CLINIC_PHONE + '<br>' +
           'WhatsApp: ' + CLINIC_WA + '<br>' +
-          'Timings: Mon · Wed · Fri — 1:00 PM to 4:00 PM<br>' +
-          'Tue · Thu · Sat — 11:00 AM to 3:00 PM' +
+          'Timings: Monday to Friday — 1:00 PM to 4:00 PM<br>' +
+          'Saturday and Sunday — 11:00 AM to 2:00 PM' +
         '</p>' +
       '</div>' +
       '<div style="padding:14px 24px;background:#0A2E33;color:#a9bfbe;font-size:11px;line-height:1.6">' +

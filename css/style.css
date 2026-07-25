@@ -656,6 +656,124 @@ h4 {
   left: 0;
   color: var(--gold);
 }
+.tech__img {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+/* TECH DETAIL PAGE */
+.techdetail__inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: start;
+}
+.techdetail__media {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  position: sticky;
+  top: 100px;
+}
+.techdetail__media img {
+  max-width: 100%;
+  max-height: 320px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.techdetail__imgnote {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.techdetail__body p {
+  color: var(--muted);
+  margin-top: 16px;
+  font-size: 1rem;
+}
+.techdetail__lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--teal-dark) !important;
+}
+.techdetail__note {
+  background: var(--teal-soft);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 22px 0;
+  font-size: 0.9rem;
+  color: var(--teal-dark);
+}
+.techdetail__note strong {
+  color: var(--teal);
+}
+@media (max-width: 960px) {
+  .techdetail__inner {
+    grid-template-columns: 1fr;
+  }
+  .techdetail__media {
+    position: static;
+  }
+}
+
+/* NEW TECHNOLOGIES */
+.techcard {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  box-shadow: var(--shadow-sm);
+}
+.techcard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+.techcard__media {
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.techcard__media img {
+  max-height: 220px;
+  width: auto;
+  object-fit: contain;
+}
+.techcard__body {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.techcard__body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.techcard__body p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  flex: 1;
+}
+.techcard__body .tcard__link {
+  margin-top: 16px;
+}
 
 /* GALLERY */
 .gallery__filters {
@@ -1073,6 +1191,7 @@ h4 {
 .section .tcard,
 .section .jstep,
 .section .tech,
+.section .techcard,
 .section .quote,
 .section .bcard,
 .section .why__item,
@@ -1087,6 +1206,7 @@ h4 {
 .reveal.in .tcard,
 .reveal.in .jstep,
 .reveal.in .tech,
+.reveal.in .techcard,
 .reveal.in .quote,
 .reveal.in .bcard,
 .reveal.in .why__item,
