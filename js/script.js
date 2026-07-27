@@ -97,7 +97,11 @@ form?.addEventListener("submit", async (e) => {
 
   try {
     if (APPS_SCRIPT_URL.startsWith("http")) {
-      await fetch(APPS_SCRIPT_URL, { method: "POST", body: payload });
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: payload,
+      });
     } else {
       console.warn("APPS_SCRIPT_URL not configured — submission not sent.");
     }
