@@ -186,6 +186,7 @@ h4 {
   align-items: center;
   justify-content: space-between;
   height: 74px;
+  gap: 18px;
 }
 .brand {
   display: flex;
@@ -219,7 +220,15 @@ h4 {
 
 .nav {
   display: flex;
-  gap: 26px;
+  align-items: center;
+  gap: clamp(14px, 1.7vw, 26px);
+  min-width: 0;
+}
+.nav__link.is-active {
+  color: var(--teal);
+}
+.nav__link.is-active::after {
+  width: 100%;
 }
 .nav__link {
   font-size: 0.9rem;
@@ -247,6 +256,7 @@ h4 {
 
 .header__cta {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 14px;
 }
@@ -405,9 +415,9 @@ h4 {
 /* ============ DOCTOR ============ */
 .doctor__inner {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
   gap: 56px;
-  align-items: stretch;
+  align-items: center;
 }
 .doctor__media {
   display: flex;
@@ -419,14 +429,14 @@ h4 {
   justify-content: center;
 }
 .doctor__photo {
-  flex: 1;
+  flex: 0 1 auto;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   background: linear-gradient(170deg, var(--teal-soft), var(--sand));
   padding: 0;
   border: 1px solid var(--line);
-  min-height: 0;
+  min-height: 520px;
 }
 .doctor__photo img {
   border-radius: 12px;
@@ -487,6 +497,9 @@ h4 {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid > .card {
+  height: 100%;
+}
 .card {
   background: var(--cream);
   border: 1px solid var(--line);
@@ -730,6 +743,7 @@ h4 {
 }
 
 /* NEW TECHNOLOGIES */
+.tech-grid > .techcard { height: 100%; }
 .techcard {
   background: var(--cream);
   border: 1px solid var(--line);
@@ -1187,39 +1201,42 @@ h4 {
 }
 
 /* ============ REVEAL ANIM ============ */
-.section .card,
-.section .tcard,
-.section .jstep,
-.section .tech,
-.section .techcard,
-.section .quote,
-.section .bcard,
-.section .why__item,
-.gtile {
+.js-reveal .section .card,
+.js-reveal .section .tcard,
+.js-reveal .section .jstep,
+.js-reveal .section .tech,
+.js-reveal .section .techcard,
+.js-reveal .section .quote,
+.js-reveal .section .bcard,
+.js-reveal .section .why__item,
+.js-reveal .gtile {
   opacity: 0;
   transform: translateY(24px);
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
 }
-.reveal.in .card,
-.reveal.in .tcard,
-.reveal.in .jstep,
-.reveal.in .tech,
-.reveal.in .techcard,
-.reveal.in .quote,
-.reveal.in .bcard,
-.reveal.in .why__item,
-.reveal.in .gtile {
+.js-reveal .reveal.in .card,
+.js-reveal .reveal.in .tcard,
+.js-reveal .reveal.in .jstep,
+.js-reveal .reveal.in .tech,
+.js-reveal .reveal.in .techcard,
+.js-reveal .reveal.in .quote,
+.js-reveal .reveal.in .bcard,
+.js-reveal .reveal.in .why__item,
+.js-reveal .reveal.in .gtile {
   opacity: 1;
   transform: none;
 }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 960px) {
+  .header__inner {
+    height: 68px;
+  }
   .nav {
     position: fixed;
-    inset: 74px 0 auto 0;
+    inset: 68px 0 auto 0;
     flex-direction: column;
     background: var(--ivory);
     padding: 20px 24px;
@@ -1249,6 +1266,13 @@ h4 {
   }
   .hero__content {
     max-width: 100%;
+  }
+  .hero {
+    min-height: auto;
+    padding: 72px 0 90px;
+  }
+  .hero__bg {
+    background-position: 68% center;
   }
   .grid--3,
   .grid--4 {
@@ -1291,12 +1315,23 @@ h4 {
   body {
     padding-bottom: 60px;
   }
-  .hero__actions .btn {
-    flex: 1;
+  .hero__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero__actions .btn:first-child {
+    grid-column: 1 / -1;
   }
   .topbar {
     display: none;
   }
+  .brand__mark {
+    width: 40px;
+    height: 40px;
+  }
+  .brand__name { font-size: 1.25rem; }
+  .brand__sub { font-size: 0.55rem; }
+  .section__head { margin-bottom: 38px; }
 }
 /*read more cards*/
 .bcard__content {
@@ -1331,4 +1366,25 @@ h4 {
 /* Blog section: cards apni height independent rahe (collapsible ke liye) */
 #blog .grid--4 {
   align-items: start;
+}
+
+/* ============ SHARED PAGE POLISH ============ */
+.page-hero { padding-bottom: 72px; }
+.clinic-pillars .card__icon { font-family: var(--serif); font-weight: 700; }
+.tech-grid .techcard__media { min-height: 230px; }
+.tech-grid .techcard__media img { max-height: 205px; }
+.gallery__grid { align-items: stretch; }
+@media (max-width: 960px) {
+  .header__inner { gap: 10px; }
+  .header__cta { margin-left: auto; }
+  .nav { gap: 6px; }
+  .doctor__inner { grid-template-columns: 1fr; }
+  .doctor__photo { min-height: 420px; }
+}
+@media (max-width: 560px) {
+  .container { padding-left: 18px; padding-right: 18px; }
+  .doctor__photo { min-height: 360px; }
+  .tech-grid .techcard__media { min-height: 190px; }
+  .hero__actions { grid-template-columns: 1fr; }
+  .hero__actions .btn:first-child { grid-column: auto; }
 }

@@ -1,9 +1,12 @@
+document.documentElement.classList.add("js-reveal");
+
 // ===== Mobile nav toggle =====
 const navToggle = document.getElementById("navToggle");
 const nav = document.getElementById("nav");
 navToggle?.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  navToggle.classList.toggle("active");
+  const open = nav.classList.toggle("open");
+  navToggle.classList.toggle("active", open);
+  navToggle.setAttribute("aria-expanded", String(open));
 });
 nav
   ?.querySelectorAll(".nav__link")
@@ -14,7 +17,7 @@ nav
 // ===== Header shadow on scroll =====
 const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 20);
+  header?.classList.toggle("scrolled", window.scrollY > 20);
 });
 
 // ===== FAQ accordion =====
@@ -170,4 +173,4 @@ document.addEventListener("click", (e) => {
   }
 });
 // ===== Footer year =====
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year") && (document.getElementById("year").textContent = new Date().getFullYear());
