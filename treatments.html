@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treatments | Ambraja Skin & Laser Clinic, Ghaziabad</title>
+    <meta
+      name="description"
+      content="Dermatologist-led treatments at Ambraja Skin & Laser Clinic, Ghaziabad — acne, scars, pigmentation, hair loss, laser hair reduction, anti-aging, and lesion removal."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ---------- TREATMENTS PAGE (stacked, non-card format) ---------- */
+      .tx-hero {
+        text-align: center;
+        padding-bottom: 24px;
+      }
+      .tx-hero .eyebrow {
+        display: block;
+      }
+
+      .tx-list {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .tx-item {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 32px;
+        padding: 56px 0;
+        border-bottom: 1px solid var(--line);
+        scroll-margin-top: 100px;
+      }
+      .tx-item:first-child {
+        padding-top: 0;
+      }
+      .tx-item:last-child {
+        border-bottom: none;
+      }
+
+      .tx-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+        background: var(--teal-soft);
+        display: grid;
+        place-items: center;
+        color: var(--teal);
+      }
+      .tx-icon svg {
+        width: 34px;
+        height: 34px;
+      }
+
+      .tx-body__head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+      }
+      .tx-body h2 {
+        font-size: clamp(1.5rem, 2.6vw, 2rem);
+        color: var(--teal-dark);
+      }
+      .tx-tagline {
+        font-family: var(--serif);
+        font-style: italic;
+        color: var(--teal);
+        font-size: 1.02rem;
+      }
+
+      .tx-overview {
+        color: var(--muted);
+        margin-top: 14px;
+        font-size: 1rem;
+        max-width: 760px;
+      }
+
+      .tx-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 26px;
+      }
+      .tx-meta__block {
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--gold);
+        border-radius: var(--radius-sm);
+        padding: 16px 18px;
+      }
+      .tx-meta__label {
+        font-family: var(--sans);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 6px;
+        display: block;
+      }
+      .tx-meta__block p,
+      .tx-meta__block ul {
+        color: var(--teal-dark);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .tx-meta__block ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .tx-meta__block li {
+        padding-left: 16px;
+        position: relative;
+      }
+      .tx-meta__block li::before {
+        content: "•";
+        color: var(--gold);
+        position: absolute;
+        left: 0;
+      }
+
+      .tx-actions {
+        margin-top: 26px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .tx-cta {
+        background: var(--teal);
+        border-radius: 24px;
+        padding: 48px 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        color: #fff;
+        margin-top: 24px;
+      }
+      .tx-cta h2 {
+        color: #fff;
+        font-size: 1.7rem;
+        max-width: 480px;
+      }
+      .tx-cta p {
+        color: #cfe1e0;
+        margin-top: 8px;
+        font-size: 0.95rem;
+        max-width: 480px;
+      }
+      .tx-cta__actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .tx-note {
+        margin-top: 40px;
+        padding: 18px 22px;
+        border: 1px dashed var(--line);
+        border-radius: 14px;
+        font-size: 0.85rem;
+        color: var(--muted);
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .tx-note strong {
+        color: var(--teal);
+        font-family: var(--sans);
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 720px) {
+        .tx-item {
+          grid-template-columns: 1fr;
+        }
+        .tx-icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 14px;
+        }
+        .tx-meta {
+          grid-template-columns: 1fr;
+        }
+        .tx-cta {
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <span class="topbar__item">📍 C-43 RDC, Rajnagar, Ghaziabad</span>
+        <span class="topbar__item">🕑 Mon–Fri 1–4 PM &nbsp;|&nbsp; Sat–Sun 11 AM–2 PM</span>
+        <a class="topbar__item" href="tel:01204552014">📞 0120-4552014</a>
+      </div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="index.html" class="brand">
+          <img src="Public/logo/logo.png" alt="Ambraja Skin &amp; Laser Clinic logo" class="brand__mark" />
+          <span class="brand__text">
+            <span class="brand__name">Ambraja</span>
+            <span class="brand__sub">Skin &amp; Laser Clinic</span>
+          </span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="doctor.html" class="nav__link">Dr. Harsh Tyagi</a>
+          <a href="clinic.html" class="nav__link">Clinic &amp; Tech</a>
+          <a href="treatments.html" class="nav__link is-active" aria-current="page">Treatments</a>
+          <a href="gallery.html" class="nav__link">Gallery</a>
+          <a href="reviews.html" class="nav__link">Reviews</a>
+          <a href="faq.html" class="nav__link">FAQ</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+        </nav>
+        <div class="header__cta">
+          <a href="enquiry.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="section tx-hero">
+        <div class="container">
+          <span class="eyebrow">What We Treat</span>
+          <h1 class="section__title">
+            Featured Treatments Patients Commonly Ask For
+          </h1>
+          <p
+            class="section__lead"
+            style="max-width: 680px; margin-left: auto; margin-right: auto"
+          >
+            Every treatment below begins with a dermatologist consultation — not
+            a fixed package. Parameters, sessions, and expected outcomes are
+            decided after Dr. Harsh Tyagi examines your skin.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ TREATMENT LIST ============ -->
+      <section class="section" style="padding-top: 0">
+        <div class="container tx-list">
+          <!-- 1. ACNE TREATMENT -->
+          <div class="tx-item" id="acne-treatment">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <circle
+                  cx="9"
+                  cy="10"
+                  r="1.1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+                <circle
+                  cx="14.5"
+                  cy="8.5"
+                  r="1.1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+                <circle
+                  cx="15"
+                  cy="14"
+                  r="1.1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Acne Treatment</h2>
+                <span class="tx-tagline"
+                  >Clearer skin, treated at the root</span
+                >
+              </div>
+              <p class="tx-overview">
+                Clearer skin starts with understanding the type of acne, its
+                triggers, and the marks it leaves behind before choosing the
+                right medical and procedural plan. Dr. Tyagi assesses hormonal,
+                bacterial, and lifestyle factors together, rather than treating
+                every breakout the same way.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Active breakouts &amp; cystic acne</li>
+                    <li>Recurring hormonal acne</li>
+                    <li>Post-acne marks &amp; oiliness</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Skin assessment, topical &amp; oral protocols, peels or
+                    laser add-ons where indicated.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    Plan reviewed monthly; most protocols involve minimal to no
+                    downtime.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Book an Acne Consultation →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ACNE SCAR TREATMENT -->
+          <div class="tx-item" id="acne-scar-treatment">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="4" y="4" width="16" height="16" rx="3" />
+                <path d="M8 15c1-2 2.5-3 4-3s3 1 4 3" />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Acne Scar Treatment</h2>
+                <span class="tx-tagline">Texture, rebuilt in stages</span>
+              </div>
+              <p class="tx-overview">
+                A tailored combination of procedures planned by scar type,
+                depth, and skin recovery goals. Ice-pick, boxcar, and rolling
+                scars respond differently, so the plan is built around what's
+                actually on your skin — not a single fixed resurfacing package.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Post-acne pitted scarring</li>
+                    <li>Boxcar &amp; rolling scars</li>
+                    <li>Uneven skin texture</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Combination of fractional resurfacing, subcision, or
+                    micro-needling based on scar depth.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    Typically staged over several sessions; downtime varies from
+                    none to a few days.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Discuss Scar Options →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. MELASMA & PIGMENTATION -->
+          <div class="tx-item" id="pigmentation-treatment">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path
+                  d="M8 10.5c1.5-1 2.5-1 4 0s2.5 1 4 0M8 14c1.5 1 2.5 1 4 0s2.5-1 4 0"
+                />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Melasma &amp; Pigmentation</h2>
+                <span class="tx-tagline"
+                  >Careful, conservative, consistent</span
+                >
+              </div>
+              <p class="tx-overview">
+                Careful treatment planning for stubborn pigmentation with
+                realistic timelines and emphasis on maintenance. Melasma in
+                particular is treated conservatively to avoid rebound
+                pigmentation — the goal is steady improvement, not an aggressive
+                one-session fix.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Melasma &amp; hormonal pigmentation</li>
+                    <li>Sun-induced dark patches</li>
+                    <li>Post-inflammatory pigmentation</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Topical regimens, laser toning or IPL where suitable, strict
+                    sun-protection protocol.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    Gradual, multi-session approach; maintenance sessions often
+                    advised long-term.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Book a Consultation →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. HAIR LOSS & PRP -->
+          <div class="tx-item" id="hair-loss-treatment">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M12 3c-3 0-5 3-5 6 0 4 2 9 5 12 3-3 5-8 5-12 0-3-2-6-5-6z"
+                />
+                <path d="M9.5 9.5v5M12 8v8M14.5 9.5v5" />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Hair Loss &amp; PRP</h2>
+                <span class="tx-tagline">Scalp health, evidence-first</span>
+              </div>
+              <p class="tx-overview">
+                Dermatologist-led scalp assessment and evidence-based options
+                for hair fall and thinning. Underlying causes — hormonal,
+                nutritional, or pattern hair loss — are identified first, and
+                PRP is used where the evidence genuinely supports it, not as a
+                default add-on.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Pattern hair thinning</li>
+                    <li>Diffuse hair fall</li>
+                    <li>Early-stage hair loss</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Scalp evaluation, bloodwork where needed, topical/oral
+                    therapy, PRP sessions if indicated.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    PRP typically spaced monthly for an initial course; no
+                    significant downtime.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Book a Hair Consultation →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. LASER HAIR REDUCTION -->
+          <div class="tx-item" id="laser-hair-reduction">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M4 12h11" />
+                <path d="M15 8l5 4-5 4" />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Laser Hair Reduction</h2>
+                <span class="tx-tagline">Progressive, skin-type aware</span>
+              </div>
+              <p class="tx-overview">
+                Planned laser sessions for long-term hair reduction with
+                skin-type appropriate settings. Because hair grows in cycles, a
+                course of sessions is required to catch follicles across their
+                active growth phase — not a single-visit result.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Unwanted facial &amp; body hair</li>
+                    <li>Coarse, resistant hair growth</li>
+                    <li>Ingrown-hair prone areas</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Diode laser platform with contact cooling, parameters set
+                    per skin &amp; hair type.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    Course of sessions spaced 4–6 weeks apart; virtually no
+                    downtime.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Book a Laser Consultation →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. ANTI-AGING & REJUVENATION -->
+          <div class="tx-item" id="anti-aging-treatment">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M8 13c1 1.2 2.4 1.8 4 1.8s3-.6 4-1.8" />
+                <path d="M9 9.5h.01M15 9.5h.01" />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Anti-Aging &amp; Rejuvenation</h2>
+                <span class="tx-tagline">Subtle, not overdone</span>
+              </div>
+              <p class="tx-overview">
+                Subtle, doctor-led options for lines, texture, skin quality, and
+                facial rejuvenation. The focus is on natural-looking improvement
+                in skin quality and tone — not a visibly "done" result.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Fine lines &amp; early aging</li>
+                    <li>Dull or uneven skin tone</li>
+                    <li>Loss of skin firmness</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Skin-quality lasers, photofacials, and targeted rejuvenation
+                    protocols.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    Usually staged over a short series; downtime is minimal.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Discuss Rejuvenation →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. MOLE, WART & SKIN TAG REMOVAL -->
+          <div class="tx-item" id="mole-wart-removal">
+            <div class="tx-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="12" r="3.2" />
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+              </svg>
+            </div>
+            <div class="tx-body">
+              <div class="tx-body__head">
+                <h2>Mole, Wart &amp; Skin Tag Removal</h2>
+                <span class="tx-tagline"
+                  >Evaluated first, treated with precision</span
+                >
+              </div>
+              <p class="tx-overview">
+                Office-based removal options after careful medical evaluation of
+                the lesion. Every growth is examined before treatment to rule
+                out anything that needs further investigation, so removal is
+                always a medical decision first.
+              </p>
+              <div class="tx-meta">
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Ideal For</span>
+                  <ul>
+                    <li>Benign moles &amp; skin tags</li>
+                    <li>Warts</li>
+                    <li>Raised or irritating lesions</li>
+                  </ul>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">What It Involves</span>
+                  <p>
+                    Clinical evaluation, precision removal via CO₂ laser or
+                    minor procedure.
+                  </p>
+                </div>
+                <div class="tx-meta__block">
+                  <span class="tx-meta__label">Sessions &amp; Downtime</span>
+                  <p>
+                    Usually a single session; minimal downtime with proper
+                    aftercare.
+                  </p>
+                </div>
+              </div>
+              <div class="tx-actions">
+                <a href="enquiry.html" class="btn btn--outline btn--sm"
+                  >Book a Lesion Evaluation →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA BAND ============ -->
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="tx-cta">
+            <div>
+              <h2>Not sure where to start?</h2>
+              <p>
+                Begin with a dermatologist-led consultation and get a clear,
+                personalized plan.
+              </p>
+            </div>
+            <div class="tx-cta__actions">
+              <a
+                href="enquiry.html"
+                class="btn"
+                style="background: #fff; color: var(--teal)"
+                >Book Appointment</a
+              >
+              <a
+                href="https://wa.me/919217754696" target="_blank" rel="noopener"
+                class="btn"
+                style="
+                  border: 1.5px solid rgba(255, 255, 255, 0.55);
+                  color: #fff;
+                  background: transparent;
+                "
+                >WhatsApp Us</a
+              >
+            </div>
+          </div>
+
+          <div class="tx-note">
+            <strong>NOTE</strong>
+            <span>
+              All content above is educational, not a diagnosis. Treatment
+              suitability, sessions, downtime, and outcomes vary by individual
+              skin type, diagnosis, and adherence, and are confirmed only after
+              an in-person dermatologist consultation.
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <img src="Public/logo/logo.png" alt="Ambraja Skin &amp; Laser Clinic" class="footer__logo" />
+          <p>Dermatologist-led skin, hair, laser &amp; aesthetic care in Ghaziabad — focused on safety, precision, and natural-looking results.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Treatments</h4>
+          <a href="treatments.html">Acne Treatment</a>
+          <a href="treatments.html">Pigmentation Treatment</a>
+          <a href="treatments.html">Hair Loss Treatment</a>
+          <a href="treatments.html">PRP for Hair Loss</a>
+          <a href="laser-hair-reduction-ghaziabad.html">Laser Hair Reduction</a>
+          <a href="treatments.html">Acne Scar Treatment</a>
+          <a href="treatments.html">Mole / Wart / Skin Tag Removal</a>
+          <a href="treatments.html">Anti-Aging Treatments</a>
+        </div>
+        <div class="footer__col">
+          <h4>Clinic</h4>
+          <a href="doctor.html">About Dr. Harsh Tyagi</a>
+          <a href="clinic.html">Clinic &amp; Technology</a>
+          <a href="technologies.html">New Technologies</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Testimonials</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Reach Us</h4>
+          <a href="tel:01204552014">📞 0120-4552014</a>
+          <a href="https://wa.me/919217754696" target="_blank" rel="noopener">💬 +91-92177 54696</a>
+          <a href="mailto:drharshtyagiderma@gmail.com">✉️ Email Us</a>
+          <p class="footer__addr">First Floor, C-43 RDC,<br />Rajnagar, Ghaziabad</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <span>© <span id="year"></span> Ambraja Skin &amp; Laser Clinic. All rights reserved.</span>
+          <span class="footer__legal"><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a> · <a href="#">Medical Disclaimer</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobilebar" aria-label="Quick actions">
+      <a href="tel:01204552014" class="mobilebar__btn"><span>📞</span>Call</a>
+      <a href="https://wa.me/919217754696" class="mobilebar__btn mobilebar__btn--wa" target="_blank" rel="noopener"><span>💬</span>WhatsApp</a>
+      <a href="enquiry.html" class="mobilebar__btn mobilebar__btn--book"><span>📅</span>Book</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const navToggle = document.getElementById("navToggle");
+      const nav = document.getElementById("nav");
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", () => nav.classList.toggle("open"));
+      }
+
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("header")
+          .classList.toggle("scrolled", window.scrollY > 10);
+      });
+
+      // Force-scroll to the hash target after full page load.
+      // Needed because sticky header / late-loading content can
+      // cause the browser's default hash-jump to land in the wrong spot.
+      window.addEventListener("load", () => {
+        if (window.location.hash) {
+          const target = document.querySelector(window.location.hash);
+          if (target) {
+            setTimeout(() => {
+              const headerOffset = 90;
+              const y =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }, 50);
+          }
+        }
+      });
+      // Handles hash clicks while already on this page (same-page nav)
+      document.querySelectorAll('a[href*="#"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const url = new URL(this.href, window.location.href);
+          if (url.pathname === window.location.pathname && url.hash) {
+            const target = document.querySelector(url.hash);
+            if (target) {
+              e.preventDefault();
+              const headerOffset = 90;
+              const y =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+              history.pushState(null, "", url.hash);
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
