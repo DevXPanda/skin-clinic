@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment | Ambraja Skin & Laser Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <span class="topbar__item">📍 C-43 RDC, Rajnagar, Ghaziabad</span>
+        <span class="topbar__item">🕑 Mon–Fri 1–4 PM &nbsp;|&nbsp; Sat–Sun 11 AM–2 PM</span>
+        <a class="topbar__item" href="tel:01204552014">📞 0120-4552014</a>
+      </div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="index.html" class="brand">
+          <img src="Public/logo/logo.png" alt="Ambraja Skin &amp; Laser Clinic logo" class="brand__mark" />
+          <span class="brand__text">
+            <span class="brand__name">Ambraja</span>
+            <span class="brand__sub">Skin &amp; Laser Clinic</span>
+          </span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="doctor.html" class="nav__link">Dr. Harsh Tyagi</a>
+          <a href="clinic.html" class="nav__link">Clinic &amp; Tech</a>
+          <a href="treatments.html" class="nav__link">Treatments</a>
+          <a href="gallery.html" class="nav__link">Gallery</a>
+          <a href="reviews.html" class="nav__link">Reviews</a>
+          <a href="faq.html" class="nav__link">FAQ</a>
+          <a href="contact.html" class="nav__link is-active" aria-current="page">Contact</a>
+        </nav>
+        <div class="header__cta">
+          <a href="enquiry.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section contact" id="enquiry">
+      <div class="container" style="max-width: 700px; margin: 0 auto">
+        <div class="section__head">
+          <span class="eyebrow">Contact Us</span>
+          <h2 class="section__title">Book Your Consultation</h2>
+          <p class="section__lead">
+            Fill the form below and our team will get back to you shortly.
+          </p>
+        </div>
+
+        <form class="contact__form" id="enquiryForm" novalidate>
+          <h3>Quick Enquiry</h3>
+          <label
+            >Full Name<input
+              type="text"
+              name="name"
+              required
+              placeholder="Your name"
+          /></label>
+          <label
+            >Mobile Number<input
+              type="tel"
+              name="mobile"
+              required
+              placeholder="10-digit mobile"
+          /></label>
+          <label
+            >Email<input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+          /></label>
+
+          <label
+            >Treatment Interested In
+            <select name="treatment">
+              <option>Acne Treatment</option>
+              <option>Pigmentation Treatment</option>
+              <option>Hair Loss Treatment</option>
+              <option>PRP for Hair Loss</option>
+              <option>Laser Hair Reduction</option>
+              <option>Acne Scar Treatment</option>
+              <option>Mole / Wart / Skin Tag Removal</option>
+              <option>Anti-Aging Treatments</option>
+            </select>
+          </label>
+
+          <label>Preferred Date<input type="date" name="date" /></label>
+          <label
+            >Message<textarea
+              name="message"
+              rows="4"
+              placeholder="Tell us more..."
+            ></textarea>
+          </label>
+
+          <div style="text-align: center; margin-top: 16px">
+            <button type="submit" class="btn btn--primary">
+              Submit Enquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <img src="Public/logo/logo.png" alt="Ambraja Skin &amp; Laser Clinic" class="footer__logo" />
+          <p>Dermatologist-led skin, hair, laser &amp; aesthetic care in Ghaziabad — focused on safety, precision, and natural-looking results.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Treatments</h4>
+          <a href="treatments.html">Acne Treatment</a>
+          <a href="treatments.html">Pigmentation Treatment</a>
+          <a href="treatments.html">Hair Loss Treatment</a>
+          <a href="treatments.html">PRP for Hair Loss</a>
+          <a href="laser-hair-reduction-ghaziabad.html">Laser Hair Reduction</a>
+          <a href="treatments.html">Acne Scar Treatment</a>
+          <a href="treatments.html">Mole / Wart / Skin Tag Removal</a>
+          <a href="treatments.html">Anti-Aging Treatments</a>
+        </div>
+        <div class="footer__col">
+          <h4>Clinic</h4>
+          <a href="doctor.html">About Dr. Harsh Tyagi</a>
+          <a href="clinic.html">Clinic &amp; Technology</a>
+          <a href="technologies.html">New Technologies</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reviews.html">Testimonials</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Reach Us</h4>
+          <a href="tel:01204552014">📞 0120-4552014</a>
+          <a href="https://wa.me/919217754696" target="_blank" rel="noopener">💬 +91-92177 54696</a>
+          <a href="mailto:drharshtyagiderma@gmail.com">✉️ Email Us</a>
+          <p class="footer__addr">First Floor, C-43 RDC,<br />Rajnagar, Ghaziabad</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <span>© <span id="year"></span> Ambraja Skin &amp; Laser Clinic. All rights reserved.</span>
+          <span class="footer__legal"><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a> · <a href="#">Medical Disclaimer</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobilebar" aria-label="Quick actions">
+      <a href="tel:01204552014" class="mobilebar__btn"><span>📞</span>Call</a>
+      <a href="https://wa.me/919217754696" class="mobilebar__btn mobilebar__btn--wa" target="_blank" rel="noopener"><span>💬</span>WhatsApp</a>
+      <a href="enquiry.html" class="mobilebar__btn mobilebar__btn--book"><span>📅</span>Book</a>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <!-- ============ MOBILE STICKY BAR ============ -->
+    <div class="mobilebar">
+      <a href="tel:01204552014" class="mobilebar__btn"><span>📞</span>Call</a>
+      <a
+        href="https://wa.me/919217754696"
+        class="mobilebar__btn mobilebar__btn--wa"
+        target="_blank"
+        rel="noopener"
+        ><span>💬</span>WhatsApp</a
+      >
+      <a href="#contact" class="mobilebar__btn mobilebar__btn--book"
+        ><span>📅</span>Book</a
+      >
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
